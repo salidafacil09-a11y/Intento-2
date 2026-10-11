@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta name="theme-color" content="#0f1512">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <title>Ceniza · Supervivencia</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="game"></div>
+
+  <div id="hud">
+    <div id="hp"><div id="hp-fill"></div></div>
+    <div id="noise" class="n0">En silencio</div>
+    <div id="chasers"></div>
+  </div>
+  <div id="debug" class="hidden"></div>
+  <div id="damage"></div>
+
+  <div id="touch-ui">
+    <div id="joy-zone"></div>
+    <div id="joy-hint"></div>
+    <div id="joy-base"><div id="joy-knob"></div></div>
+    <button id="btn-run" type="button">Correr</button>
+  </div>
+
+  <div id="start" class="screen">
+    <div class="panel">
+      <h1>Ceniza</h1>
+      <p class="lead">El pueblo está en silencio, pero no vacío. Los muertos caminan despacio y te oyen de lejos.</p>
+      <ul class="controls">
+        <li><b>Teclado</b> WASD o flechas para moverte, Shift para correr</li>
+        <li><b>Móvil</b> arrastra con el pulgar izquierdo, mantén Correr con el derecho</li>
+        <li><b>Mando</b> stick izquierdo para moverte, B o L3 para correr</li>
+      </ul>
+      <p id="start-msg" class="note">Correr hace ruido y atrae zombis desde más lejos.</p>
+      <button id="btn-start" type="button">Entrar al pueblo</button>
+    </div>
+  </div>
+
+  <div id="dead" class="screen hidden">
+    <div class="panel">
+      <h1>Te alcanzaron</h1>
+      <p class="lead">Los zombis son lentos, pero no se cansan. Esta vez cuida el ruido que haces.</p>
+      <button id="btn-retry" type="button">Intentar de nuevo</button>
+    </div>
+  </div>
+
+  <div id="rotate-hint">Gira el teléfono para jugar mejor</div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="src/util.js"></script>
+  <script src="src/input.js"></script>
+  <script src="src/models.js"></script>
+  <script src="src/world.js"></script>
+  <script src="src/player.js"></script>
+  <script src="src/zombie.js"></script>
+  <script src="src/main.js"></script>
+</body>
+</html>
